@@ -1,8 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Olimi - AI Agent Management Platform
+
+A Next.js-based application for managing and configuring AI agents for outbound and inbound calls.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v16 or higher) - [Download](https://nodejs.org/)
+- **npm**, **yarn**, **pnpm**, or **bun** package manager
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install Dependencies
+
+Navigate to the project directory and install required packages:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 2. Run the Development Server
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -14,23 +39,52 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Open in Browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) in your web browser to see the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The page will auto-update as you make changes to the code.
+
+## Project Structure
+
+- `app/` - Next.js app directory with pages and components
+- `lib/` - Utility functions and schemas (includes `agentSchema`)
+- `components/` - Reusable UI components
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To deploy on Vercel:
 
-## Deploy on Vercel
+1. Push your code to GitHub
+2. Visit [Vercel](https://vercel.com/new)
+3. Import your repository
+4. Vercel will automatically detect Next.js and deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For detailed instructions, see [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Troubleshooting
+
+**Port 3000 already in use?**
+
+```bash
+npm run dev -- -p 3001
+```
+
+**Clear cache and reinstall:**
+
+```bash
+rm -r node_modules package-lock.json
+npm install
+npm run dev
+```
